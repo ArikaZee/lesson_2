@@ -1,0 +1,81 @@
+'''
+1.  Создать список и заполнить его элементами различных типов данных.
+    Реализовать скрипт проверки типа данных каждого элемента.
+    Использовать функцию type() для проверки типа.
+    Элементы списка можно не запрашивать у пользователя, а указать явно, в программе.
+'''
+
+#my_list = [2, "a", (9,8,7), {"Aug": 8, 'Sept': 14, 'Nov': 7}, [2, 2, 5], set([3,5,7])]
+
+#for element in my_list:
+    #print(type(element))
+
+'''
+2.  Для списка реализовать обмен значений соседних элементов, т.е. 
+Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т.д. 
+При нечетном количестве элементов последний сохранить на своем месте. 
+Для заполнения списка элементов необходимо использовать функцию input().
+'''
+
+#input_list = input("Введите через пробел элементы списка: ")
+#input_list = input_list.split()
+#input_list = [9, 7, 5, 3, 1, 8, 6, 4, 2]
+
+#for index in range(0, len(input_list)-1, 2):
+    #input_list[index], input_list[index+1] = input_list[index+1], input_list[index]
+
+#print(input_list)
+
+#result_list = []
+#for element in input_list[::2]:
+    #index = input_list.index(element)
+    #if index+1 == len(input_list):
+        #result_list.append(element)
+    #else:
+        #first_element, second_element = input_list[index], input_list[index+1]
+        #result_list.extend([second_element, first_element])
+
+#print(result_list)
+
+'''
+3.  Пользователь вводит месяц в виде целого числа от 1 до 12. 
+Сообщить к какому времени года относится месяц (зима, весна, лето, осень). 
+Напишите решения через list и через dict.
+'''
+#try:
+    #number_of_month = int(input("Введите номер месяца числом от 1 до 12: "))
+#except ValueError:
+    #print("Неверно введен номер месяца")
+#else:
+    #winter = [12, 1, 2]
+    #spring = [3, 4, 5]
+    #summer = [6, 7, 8]
+    #autumn = [9, 10, 11]
+
+    #if number_of_month in winter:
+        #print('Зима')
+    #elif number_of_month in spring:
+        #print('Весна')
+    #elif number_of_month in summer:
+        #print('Лето')
+    #elif number_of_month in autumn:
+        #print('Осень')
+    #else:
+        #print('Время года не определено')
+
+#seasons_dict = {}
+#seasons_dict = seasons_dict.fromkeys([12, 1, 2], 'Зима')
+#seasons_dict.update({}.fromkeys([3, 4, 5], 'Весна'))
+#seasons_dict.update({}.fromkeys([6, 7, 8], 'Лето'))
+#seasons_dict.update({}.fromkeys([9, 10, 11], 'Осень'))
+
+#print(seasons_dict.get(number_of_month))
+
+#for season_month_number, season in seasons_dict.items():
+    #if number_of_month == season_month_number:
+        #print(season)
+        #break
+    #else:
+        #print('Время года не определено')
+
+    #print(seasons_dict[number_of_month])
